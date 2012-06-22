@@ -1,0 +1,24 @@
+{
+	"name": "42 music downloader",
+	"description": "Позволяет скачивать музыку со всех страниц сайта вконтакте, сохраняя названия (при нажатии на иконку сохранения левой кнопкой мыши).",
+	"version": "1.23.3742",
+	"manifest_version": 2,
+
+	"icons": {
+		"16":"icons/icon_16.png",
+		"48":"icons/icon_48.png",
+		"128":"icons/icon_128.png"
+	},
+
+	"web_accessible_resources": [
+		"icons/download.png"
+  	],
+	
+	"content_scripts": [
+		{
+			"matches": ["http://*.vk.com/*","https://*.vk.com/*","http://*.vkontakte.ru/*","https://*.vkontakte.ru/*"],
+			"css": ["content.css"],
+			"js": ["content.js"]
+		}
+	]
+}
